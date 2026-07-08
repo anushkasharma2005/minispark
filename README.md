@@ -16,6 +16,11 @@ python examples/wordcount.py data/sample.txt
 # if the above command doesnt work try this 
 PYTHONPATH=. python3 examples/wordcount.py data/sample.txt
 
+
+# run the smoketest 
+source .venv/bin/activate && PYTHONPATH=. python tests/test_core.py
+
+
 ```
 
 Docker
@@ -41,7 +46,18 @@ the RDD class is a representation of a distributed dataset. It allows you to per
 Each transformation creates a new RDD that keeps track of its parent and the transformation applied. 
 When you call collect(), it computes the final result by applying all the transformations in order to the base RDD's partitions, either in parallel or sequentially.
 
+
+
+now we added the count() and reduce() methods to the RDD class. which basically allow us to count the number of elements in the RDD and reduce the elements using a binary function.
+binary function here means a function that takes two arguments and returns a single value. For example, a function that adds two numbers together is a binary function.
+the smoketest is basically checking if the RDD is being created correctly and if the transformations are being applied correctly. 
+It creates an RDD from a list of numbers, applies a map transformation to double the numbers, and then collects the results. 
+It also tests the count and reduce methods of the RDD class. 
+
+
+
 The use of this is that we can create a pipeline of transformations on a dataset and then execute them all at once, which is more efficient than executing each transformation separately.
+the use of the count() and reduce() methods is for aggregating data. 
 
 
 ---
