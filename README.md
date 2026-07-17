@@ -94,21 +94,11 @@ lose_partition() method to the RDD class. This method simulates a lost partition
 ---
 
 ya so thats it for now ig. I know i lost the challenge of making this project in 3 hrs but hey, at least we have a working prototype now. HAHAHA. 
-In future i can extent this to include more features like caching, checkpointing, and more complex transformations.I can also make it distributed across multiple machines instead of just a single node. 
+In future i can extend this to include more features like caching, checkpointing, and more complex transformations.I can also make it distributed across multiple machines instead of just a single node. 
 
 But for now Adio!!
 THanks for stopping by!
 
 Note: This is not vibe codede. Its build with the aid of AI tho :))
-
-
-
-
-
---- 
-remove this part 
-
-
-run the smoketest 
 source .venv/bin/activate && PYTHONPATH=. python tests/test_core.py
 
